@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .modal {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 2;
+        display: none;
+      }
+
+      .modal_outer {
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+        background-color: #fff;
+        cursor: pointer;
+        transform: translate(-50%, -50%);
+      }
+
+      .modal_inner {
+        position: relative;
+
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .modal_inner>img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+      }
+
+      .btn_close {
+        text-transform: uppercase;
+        font-size: 18px;
+        background-color: transparent;
+        position: absolute;
+        border: none;
+        color: #e03131;
+        font-weight: bold;
+        cursor: pointer;
+        top: 15px;
+        left: 15px;
+
+      }
+
+      .btn_close:hover {
+        color: #ff6b6b;
+      }
+
+      .title {
+        background-color: #ffe8cc;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-size: 26px;
+        color: #ffa94d;
+        border-radius: 5px;
+      }
+
+      .action_container {
+        display: flex;
+        justify-content: center;
+        padding-top: 200px;
+      }
+
+      .btn_open {
+        padding: 15px 30px;
+        border-radius: 5px;
+        border: none;
+        background-color: #4444e8;
+        color: white;
+        cursor: pointer;
+        font-size: 26px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="modal">
+      <div class="modal_outer">
+        <div class="modal_inner">
+          <button class="btn_close">x</button>
+          <img src="/img/profile.jpeg" alt="profile picture">
+          <h2>Basit Ali</h2>
+          <a href="https://www.codingwithbasit.com">www.codingwithbasit.com</a>
+          <p class="title">JavaScript Engineer</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="action_container">
+      <button class="btn_open">Open Modal</button>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+
+</html>
